@@ -1,0 +1,457 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-color: #2E7D32;
+    --text-color: #fff;
+    --bg-color: #1e1c2a;
+    --big-font: 3rem;
+    --h2-font: 2rem;
+    --p-font: 0.9rem;
+}
+
+*::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* Body Styles */
+body {
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: var(--bg-color);
+}
+
+.logo {
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 2.4rem;
+}
+
+.logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    transition: .4s;
+}
+
+#menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* Section Styles */
+section {
+    padding: 70px 17%;
+}
+
+/* Home Section Styles */
+.home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+}
+
+.home-text {
+    flex: 1;
+    padding-right: 50px; /* Jarak antara teks dengan gambar */
+    text-align: left; /* Teks di sebelah kiri */
+}
+
+.home-img {
+    flex: 1;
+    text-align: center;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.home-text h1 {
+    font-size: var(--big-font);
+    color: var(--main-color);
+}
+
+.home-text h2 {
+    font-size: var(--h2-font);
+    margin: 1rem 0 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 0.5rem;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* About Section Styles */
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    background-color: #1e1c2a;
+}
+
+.about-img {
+    flex: 1;
+    text-align: center;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.about-text {
+    flex: 1;
+    padding-left: 50px; /* Jarak antara teks dengan gambar */
+    text-align: left; /* Teks di sebelah kiri */
+}
+
+.about-text span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+}
+
+.about-text p {
+    margin: 0.8rem 0 1.8rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Project Section Styles */
+.project {
+    text-align: center;
+    position: relative;
+}
+
+.heading {
+    margin-bottom: 50px;
+}
+
+.heading span,
+.heading h2 {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.project-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-color: #fefefe; /* warna latar belakang kotak */
+    padding: 30px; /* ruang dalam kotak */
+    border-radius: 10px; /* sudut bulatan kotak */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* bayangan kotak */
+}
+
+.box {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    background: #feeee7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.box img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+.box-img img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.box h2 {
+    font-size: 1.3rem;
+    color: var(--bg-color);
+}
+
+.box h3 {
+    color: var(--main-color);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 4px 0 10px;
+}
+
+.box p {
+    font-size: var(--p-font);
+    color: var(--bg-color);
+    font-weight: 500;
+}
+
+.box .bx {
+    position: absolute; /* Tambah properti */
+    top: 10px; /* Sesuaikan posisi vertikal */
+    right: 10px; /* Sesuaikan posisi horizontal */
+    font-size: 20px;
+    padding: 7px 10px;
+    border-radius: 0 0.5rem 0 0.5rem;
+}
+
+/* Call to Action Section Styles */
+.cta {
+    background: #feeee7;
+    padding: 70px 0;
+    text-align: center;
+    width: 66%;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+
+.cta h2 {
+    font-size: 2rem;
+    color: var(--bg-color);
+    margin-bottom: 30px;
+}
+
+/* Footer Section Styles */
+.footer {
+    background: var(--bg-color);
+    color: var(--text-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 70px 17%;
+}
+
+.col {
+    width: 25%;
+    text-align: left;
+}
+
+.col h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.col h4:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50px;
+    left: 0;
+    bottom: -8px;
+    background: var(--main-color);
+}
+
+.col p {   
+    font-size: 1rem; /* Ukuran font untuk teks */
+    color: #9897a9; /* Warna teks */
+    margin-top: 0; /* Hapus margin atas untuk memastikan konten dimulai dari atas */
+    white-space: nowrap; /* Menghindari pembagian baris */
+    overflow: hidden; /* Menghindari konten yang melebihi lebar untuk dibentuk */
+    text-overflow: ellipsis;
+}
+
+.col ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.col ul li a {
+    color: #9897a9;
+    font-size: 1.1rem;
+    display: block;
+    text-transform: none;
+    transition: .4s;
+}
+
+.col ul li a:hover {
+    color: #2E7D32;
+    transform: translateX(-12px);
+}
+
+.col .social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col .social a {
+    height: 40px;
+    width: 40px;
+    background: var(--main-color);
+    color: var(--text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+.col .social a:hover {
+    transform: scale(1.2);
+}
+
+.bottom-bar {
+    color: #fff;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+/* General Styles */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    .navbar {
+        display: none;
+    }
+    #menu-icon {
+        display: block;
+    }
+}
+
+/* Home Section Styles */
+@media screen and (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+    .home-text {
+        padding-right: 0;
+    }
+    .home-img {
+        margin-top: 20px;
+    }
+}
+
+/* About Section Styles */
+@media screen and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img {
+        margin-bottom: 20px;
+    }
+    .about-text {
+        padding-left: 0;
+    }
+}
+
+/* Project Section Styles */
+@media screen and (max-width: 768px) {
+    .project-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .box {
+        width: 90%;
+        margin-bottom: 20px;
+        padding: 20px;
+        text-align: center;
+    }
+    .box img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer Section Styles */
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+    .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--main-color);
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+        display: flex;
+    }
+  .navbar {
+        display: none;
+    }
+}
